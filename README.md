@@ -19,7 +19,7 @@ class {'vlc': }
 Install specific version of VLC:
 
 ```
-class {'VLC':
+class {'vlc':
   version => '2.0.8',
 }
 ```
