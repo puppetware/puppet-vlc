@@ -2,6 +2,10 @@
 #
 # Installs VLC for OS X.
 #
+# === Parameters:
+#
+# [*version*] Version of VLC to install
+#
 # === Examples
 #
 #  class { vlc:
