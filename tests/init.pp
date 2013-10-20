@@ -1,1 +1,1 @@
-include vlc
+class {'vlc': }

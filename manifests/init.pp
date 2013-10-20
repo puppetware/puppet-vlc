@@ -4,6 +4,7 @@
 #
 # === Parameters:
 #
+# [*mirror*] Mirror to download VLC from
 # [*version*] Version of VLC to install
 #
 # === Examples
@@ -21,6 +22,7 @@
 # Copyright 2013 Ryan Skoblenick.
 #
 class vlc (
+  $mirror = $vlc::params::mirror,
   $version = $vlc::params::version
 ) inherits vlc::params {
   anchor {'vlc::begin': } ->

@@ -12,6 +12,7 @@
 #
 class vlc::params {
 
-  $version = '2.0.8'
+  $mirror = 'http://mirror.csclub.uwaterloo.ca'
+  $version = '2.1.0'
 
 }
