@@ -19,14 +19,12 @@ class vlc::install {
     default => fail("Unrecognized architecture: ${::architecture}")
   }
 
-  $os_family = downcase($::kernel) ? {
-    'darwin' => 'macosx',
-    default => fail("Unsupported Operating System: ${::operatingsystem}")
+  $os_family = $::osfamily ? {
+    'Darwin' => 'macosx',
   }
 
-  $source = downcase($::kernel) ? {
-    'darwin' => "${mirror}/vlc/vlc/${version}/${$os_family}/vlc-${version}.dmg",
-    default => fail("Unsupported Kernel: ${::kernel} operatingsystem: ${::operatingsystem}")
+  $source = $::osfamily ? {
+    'Darwin' => "${mirror}/vlc/vlc/${version}/${$os_family}/vlc-${version}.dmg",
   }
 
   package {"vlc-${version}":

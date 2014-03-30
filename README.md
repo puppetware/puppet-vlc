@@ -10,7 +10,7 @@ Supported Platforms:
 Examples
 --------
 
-Install VLC 2.1.0 by default:
+Install VLC 2.1.4 by default:
 
 ```
 class {'vlc': }
